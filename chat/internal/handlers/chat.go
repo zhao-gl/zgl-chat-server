@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	"io"
 	"strings"
 )
@@ -131,7 +132,7 @@ func convertChatResponse(data string) (models.SSEResponse, error) {
 	}
 
 	simpleResp := models.SSEResponse{
-		ID: "111",
+		ID: uuid.New().String(),
 	}
 
 	// 提取所有 choices 中的 content
