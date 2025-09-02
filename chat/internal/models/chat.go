@@ -9,9 +9,12 @@ type RequestContent struct {
 
 // Message 消息结构体
 type Message struct {
-	Role    string `json:"role"`    // "user" 或 "ai"
-	Content string `json:"content"` // 消息内容
-	Time    string `json:"time"`    // 时间戳
+	Id         string `json:"id"`
+	SessionId  string `json:"sessionId"`
+	Role       string `json:"role"`       // "user" 或 "ai"
+	Content    string `json:"content"`    // 消息内容
+	CreateTime string `json:"createTime"` // 时间戳
+	UpdateTime string `json:"updateTime"`
 }
 
 type Session struct {
